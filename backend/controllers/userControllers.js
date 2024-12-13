@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler')
 const User = require('../models/userModel')
+const generateToken = require('../utils/generateToken')
 
 const registerUser = asyncHandler (async (req, res) => {
     const { name, email, password, picture } = req.body;
@@ -16,7 +17,7 @@ const registerUser = asyncHandler (async (req, res) => {
             password,
             picture
     });
-
+    
     if (User) {
         res.status(201).json({
             _id: user._id,
@@ -24,6 +25,7 @@ const registerUser = asyncHandler (async (req, res) => {
             email: user.email,
             isAdmin: user.isAdmin,
             picture: user.picture,
+            token: generateToken(user._id)
         })
     }
     else {
@@ -44,6 +46,7 @@ const authUser = asyncHandler (async (req, res) => {
             email: user.email,
             isAdmin: user.isAdmin,
             picture: user.picture,
+            token: generateToken(user._id)
         });
     }
     else {
