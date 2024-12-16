@@ -90,3 +90,14 @@
     text-decoration: underline;
   }
   
+  .button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .button-group .btn {
+    flex: 1;
+  }
+  

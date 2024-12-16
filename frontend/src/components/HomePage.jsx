@@ -5,12 +5,16 @@ const HomePage = () => {
   return (
     <div className="container">
       <div className="form-box">
-        <h2>Welcome to the Home Page</h2>
-        <p>You're now logged in! Explore our features and enjoy your stay.</p>
-        <button className="btn">Explore</button>
-        <button className="btn" onClick={() => (window.location.href = "/login")}>
-          Logout
-        </button>
+        <h2>Welcome to Our App</h2>
+        <p>Please log in or sign up to continue.</p>
+        <div className="button-group">
+          <button className="btn" onClick={() => (window.location.href = "/login")}>
+            Login
+          </button>
+          <button className="btn" onClick={() => (window.location.href = "/signup")}>
+            Sign Up
+          </button>
+        </div>
       </div>
     </div>
   );
