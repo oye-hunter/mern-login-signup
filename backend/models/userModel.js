@@ -19,10 +19,6 @@ const userSchema = mongoose.Schema({
     isAdmin: {
         type: Boolean,
         default: false
-    },
-    picture: {
-        type: String,
-        default: 'https://st3.depositphotos.com/13159112/17145/v/1600/depositphotos_171453724-stock-illustration-default-avatar-profile-icon-grey.jpg'
     }
 }, {
     timestamps: true
