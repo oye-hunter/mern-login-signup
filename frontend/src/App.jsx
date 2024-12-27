@@ -5,6 +5,8 @@ import SignupPage from "./components/SignupPage";
 import HomePage from "./components/HomePage";
 import LandingPage from "./components/LandingPage";
 import ForgetPasswordPage from "./components/ForgetPasswordPage";
+import ResetPasswordPage from "./components/ResetPasswordPage";
+import OTP from "./components/OTP";
 
 const App = () => {
   const isAuthenticated = false; // Replace with actual authentication logic
@@ -20,6 +22,8 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/forget-password" element={<ForgetPasswordPage />} />
+        <Route path="/reset-password" element={<ResetPasswordPage />} />
+        <Route path="/otp" element={<OTP />} />
       </Routes>
     </Router>
   );
